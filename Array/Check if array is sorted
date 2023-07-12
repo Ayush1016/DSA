@@ -1,0 +1,18 @@
+Problem link: https://practice.geeksforgeeks.org/problems/check-if-an-array-is-sorted0701/0
+
+
+class Solution {
+  public:
+    bool arraySortedOrNot(int arr[], int n) {
+        if (n == 1 || n == 0)
+        return true;
+        
+        for(int i=1;i<n;i++){
+        if (arr[i-1]>arr[i]){
+            return false;
+        }
+        }
+        return true;
+    
+    }
+};

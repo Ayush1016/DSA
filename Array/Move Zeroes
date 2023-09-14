@@ -1,0 +1,21 @@
+Link: https://leetcode.com/problems/move-zeroes/description/
+
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        vector<int> temp;                             //first we will create a vector temp so that we can store non zeroes values in this
+        for (int i=0;i<nums.size();i++){              //now we will traverse all element
+            if(nums[i]!=0){                           //will put all non zeroes number in temp variable
+                temp.push_back(nums[i]);
+            }
+        }
+        int nonzero=temp.size();                      //we will find the size the non zero element so that we can put all in nums from index 0 to size of non zero
+        for(int i=0;i<nonzero;i++){                   //now we will run loop from index 0 to size of non zeroes so that we can store all non zeroes number fromm index zero to nonzero 
+            nums[i]=temp[i];                          //will store these non zeroes value from temp to nums
+        }
+
+        for(int i=nonzero;i<nums.size();i++){         //we will run loop from nonzeroes to last index to insert zeroes values in it
+            nums[i]=0;                                //in last we will insert all zero values after non zeroes number
+        }
+    }
+};

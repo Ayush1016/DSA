@@ -6,9 +6,9 @@ public:
         int sum=0;
         int n=nums.size();
         for(int i=0;i<nums.size();i++){
-            sum=sum+nums[i];
+            sum=sum+nums[i];                       //sum of all the elements in array
         }
-        int num=(n*(n+1))/2;
+        int num=(n*(n+1))/2;                      //Sum of all numbers fron 1 to n is given by (n*(n+1))/2
         return num-sum;
     }
 };

@@ -1,0 +1,9 @@
+Link: https://leetcode.com/problems/next-permutation/solutions/
+
+class Solution {
+public:
+    void nextPermutation(vector<int>& nums) {
+        next_permutation(nums.begin(),nums.end());      //next_permutation is inbuilt in cpp STL
+        // return nums;
+    }
+};

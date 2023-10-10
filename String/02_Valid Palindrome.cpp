@@ -33,6 +33,4 @@ public:
     }
     return checkpalindrome(temp);
 }
-
-
 };

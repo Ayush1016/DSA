@@ -10,3 +10,20 @@ public:
         return arr[arr.size()-1];
     }
 };
+
+
+//Second Approach
+class Solution
+{
+public:
+    int largest(vector<int> &arr, int n)
+    {
+        int largest=arr[0];                   //Here we will declare first element of array as a largest element
+        for(int i=1;i<n;i++){
+            if(arr[i]>largest){               //Now we will start comparing element from index 0 to all element and if any number is greater than that then we will update the value of largest
+                largest=arr[i];
+            }
+        }
+        return largest;
+    }
+};

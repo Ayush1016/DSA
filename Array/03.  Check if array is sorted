@@ -4,15 +4,13 @@ Problem link: https://practice.geeksforgeeks.org/problems/check-if-an-array-is-s
 class Solution {
   public:
     bool arraySortedOrNot(int arr[], int n) {
-        if (n == 1 || n == 0)
+        if(n==1 || n==0)        //Checks for base case
         return true;
-        
         for(int i=1;i<n;i++){
-        if (arr[i-1]>arr[i]){
-            return false;
-        }
+            if(arr[i]<arr[i-1]){
+                return false;
+            }
         }
         return true;
-    
     }
 };

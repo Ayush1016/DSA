@@ -4,10 +4,10 @@ Link: https://leetcode.com/problems/rotate-array/description/
 class Solution {
 public:
     void rotate(vector<int>& nums, int k) {
-      int n=nums.size();
-      k=k%n;                                         
-        reverse(nums.begin(),nums.begin()+n-k);     
-        reverse(nums.begin()+n-k,nums.end());
-        reverse(nums.begin(),nums.end());
+        int n = nums.size();
+        k = k % n;                                                   // Calculate the effective rotation amount (in case k is greater than the array size)                                         
+        reverse(nums.begin(), nums.begin() + n - k);                // Reverse the first portion of the array (from the beginning to n-k-1)
+        reverse(nums.begin() + n - k, nums.end());                 // Reverse the second portion of the array (from n-k to the end) 
+        reverse(nums.begin(), nums.end());                        // Reverse the entire array to complete the rotation
     }
 };

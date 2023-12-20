@@ -1,4 +1,4 @@
-Link: https://leetcode.com/problems/rotate-array/description/
+Link: https://leetcode.com/problems/rotate-array/description/     (For Right)
 
 
 class Solution {
@@ -11,3 +11,16 @@ public:
         reverse(nums.begin(), nums.end());                        // Reverse the entire array to complete the rotation
     }
 };
+
+
+
+Link:   https://practice.geeksforgeeks.org/problems/rotate-array-by-n-elements-1587115621/1     (for Left)
+
+void rotateArr(int arr[], int d, int n) {
+    d = d % n;                          // Calculate the effective rotation amount (in case d is greater than the array size)
+    reverse(arr, arr + d);                // Reverse the first portion of the array (from the beginning to d-1)
+    reverse(arr + d, arr + n);            // Reverse the second portion of the array (from d to the end)
+    reverse(arr, arr + n);                 // Reverse the entire array to complete the rotation
+}
+
+    

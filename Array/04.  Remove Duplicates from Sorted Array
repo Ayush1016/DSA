@@ -4,13 +4,13 @@ Problem Link: https: https://leetcode.com/problems/remove-duplicates-from-sorted
 class Solution{
 public:
     int remove_duplicate(int nums[],int n){
-        int i=0;
-        for(int j=1;j<n;j++){
-            if(nums[i]!=nums[j]){
-                i++;
-            }
-                nums[i]=nums[j];
+        int i = 0;  
+        for (int j = 1; j < n; j++) {                         // Iterate through the array starting from index 1
+        if (nums[i] != nums[j]) {                            // Check if the element at index i is not equal to the element at index j
+            i++;                                            // If not equal, increment i
         }
-        return i+1;
+        nums[i] = nums[j];                                  // Copy the element at index j to the next position after the last unique element
+    }
+    return i + 1;                                          // Return the length of the array with duplicates removed
     }
 };

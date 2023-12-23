@@ -5,6 +5,6 @@ public:
     int majorityElement(vector<int>& nums) {
         sort(nums.begin(),nums.end());
         int n=nums.size();
-        return nums[n/2];                        //Once the array is sorted, the majority element will always be present at index n/2, where n is the size of the array.This is because the majority element occurs more than n/2 times, and when the array is sorted, it will occupy the middle position.
+        return nums[n/2];         //Once the array is sorted, the majority element will always be present at index n/2, where n is the size of the array.This is because the majority element occurs more than n/2 times, and when the array is sorted, it will occupy the middle position.
     }
 };

@@ -11,6 +11,6 @@ bool hasCycle(ListNode *head) {
             return true;  // If slow and fast pointers meet, there is a cycle.
         }
     }
-    return false; 
+       return false; 
     }
-    }
+}

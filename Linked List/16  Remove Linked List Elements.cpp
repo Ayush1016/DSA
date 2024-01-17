@@ -19,5 +19,4 @@ ListNode* removeElements(ListNode* head, int val) {
             temp = temp->next;
         }
     }
-
     return head;

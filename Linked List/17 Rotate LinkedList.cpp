@@ -16,7 +16,7 @@ ListNode* rotateRight(ListNode* head, int k) {
             temp=temp->next;
             head=head->next;
             k--;
-        }
+        } 
         temp->next=NULL;
         return head;
     }
